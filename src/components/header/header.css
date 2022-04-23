@@ -1,0 +1,42 @@
+.header{
+    margin-top: 100px ;
+}
+.testZoom img{
+    display:block;
+    transition: all .3s ease;
+}
+.testZoom img:hover{
+    transform: scale(1.3);
+}
+.testZoom div{
+    display: block;
+    overflow: hidden;
+}
+.headerTitles{
+    display:flex ;
+    flex-direction: column;
+    align-items: center; 
+    font-family: 'Lora', serif;
+    color: #444 ;
+}
+.headerTitlesSm{
+    position: absolute;
+    top:14%;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+
+}
+.headerTitlesLg{
+    position: absolute;
+    top:14%;
+    font-size: 100px;
+    font-family: 'Lora', serif;
+    color:chocolate; 
+    
+}
+.headerImg{
+    width: 100%;
+    height: 500px; 
+    margin-top: 50px;
+    object-fit: cover;
+}
