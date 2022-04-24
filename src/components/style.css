@@ -3350,6 +3350,7 @@ div.container {
 .list--item {
   flex-basis: 100%;
 }
+
 .list--product {
   display: none;
 }
