@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
 import "./style.css";
-import "./Shop.css";
 
 export default function ShopPage() {
   var products = [
