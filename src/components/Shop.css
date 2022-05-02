@@ -2,13 +2,20 @@
   width: 60%;
   border-radius: 24px;
 }
+.info__img:hover {
+  transform: scale(1.03);
+  transform-style: preserve-3d;
+  object-fit: cover;
+}
+#Stinfo__product ul li select {
+  font-size: 18px;
+  width: 160px;
+  text-align: center;
+}
 #Stinfo__product ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-#Stinfo__product li {
-  margin-top: 20px;
 }
 #Stinfo__product li h2 {
   font-weight: 600;
@@ -16,4 +23,55 @@
 #Stinfo__product li span {
   font-size: 24px;
   font-weight: 500;
+}
+@media (min-width: 1200px) {
+  #Stinfo__product li {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  #Stinfo__product li {
+    margin-top: 16px;
+  }
+  .info__img {
+    width: 64%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  #Stinfo__product li {
+    margin-top: 10px;
+  }
+  .info__img {
+    width: 42%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 768px) and (min-width: 440px) {
+  .info__img {
+    width: 50%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 440px) {
+  #Stinfo__product li {
+    margin-top: 6px;
+  }
+  .info__img {
+    width: 60%;
+    border-radius: 24px;
+  }
+  ul .button--double {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  li select {
+    font-size: 18px;
+    width: 160px;
+  }
+  .button--double .button-btn {
+    width: 200px;
+  }
 }

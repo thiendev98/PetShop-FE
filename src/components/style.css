@@ -3224,6 +3224,7 @@ div.container {
 .Slider__text {
   font-size: 24px;
   font-weight: 500;
+  text-align: center;
 }
 
 .List__product {
@@ -3238,20 +3239,20 @@ div.container {
   object-fit: cover;
 }
 .product__item {
-  flex-basis: 30%;
+  flex-basis: 28%;
   text-align: center;
 }
 .product__name {
   padding-top: 20px;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
 }
 .product__name:hover {
   color: yellow;
 }
 .product__img {
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   border-radius: 24px;
 }
 .product__price {

@@ -93,10 +93,10 @@ export default function ShopPage() {
                   <>
                     <div id="Stinfo__product">
                       <div className="row container-fluid">
-                        <div className="col-xl-6">
+                        <div className="col-xl-6 col-lg-6">
                           <img className="info__img" src={product.img} />
                         </div>
-                        <div className="col-xl-6">
+                        <div className="col-xl-6 col-lg-6">
                           <ul>
                             <li>
                               <h2>{product.name}</h2>
@@ -148,7 +148,7 @@ export default function ShopPage() {
                               </select>
                             </li>
 
-                            <li>
+                            <li className="button--double">
                               <button
                                 className="button-btn"
                                 onClick={() =>
