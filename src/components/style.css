@@ -3308,6 +3308,7 @@ div.container {
   font-weight: 800;
   margin-left: 12px;
   margin-right: 8px;
+  border: 1px solid #fff;
 }
 
 .list--item > input {
@@ -3351,6 +3352,9 @@ div.container {
   flex-basis: 100%;
 }
 
+.slide {
+  display: none;
+}
 .list--product {
   display: none;
 }

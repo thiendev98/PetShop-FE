@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
 import "./style.css";
+import "./Shop.css";
 
-function Page() {
+export default function ShopPage() {
   var products = [
     {
       key: "1",
@@ -48,112 +49,132 @@ function Page() {
       quantity: 1,
     },
   ];
-  const showInfo = (index) => {
-    var p = document.getElementsByClassName("list--product");
-    $(".product__item").hide();
-    $("#Slider").hide();
-    $(p[index]).css("display", "flex");
-  };
-  return (
-    <div id="Page">
-      <div className="List__product">
-        {products.map((product, index) => (
-          <>
-            <div>
-              <div className="product__item" onClick={() => showInfo(index)}>
-                <img className="product__img" src={product.img} />
-                <h2 className="product__name">{product.name}</h2>
-                <p className="product__text">{product.about}</p>
-                <p className="product__price">{product.price} USD</p>
-              </div>
-            </div>
-            <StInfo
-              src={product.img}
-              name={product.name}
-              about={product.about}
-              price={product.price}
-            />
-          </>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-const StInfo = (props) => {
   const [quantity, setQuantity] = useState(1);
-  const returnShop = () => {
-    $(".list--product").css("display", "none");
-    $("#Slider").fadeIn(800);
-    $(".product__item").fadeIn(1000);
-  };
-  return (
-    <>
-      <div id="Stinfo__product">
-        <div className="list--product">
-          <div className="list--item">
-            <img className="Stinfo__img" src={props.src} />
-          </div>
-          <div className="list--item">
-            <h3>{props.name}</h3>
-            <p
-              className="Stinfo__price"
-              style={{ fontWeight: "600", fontSize: "24px" }}
-            >
-              10,99 USD
-            </p>
-            <p style={{ fontSize: "20px" }}>{props.about}</p>
-            <p className="Stinfo__quantity">
-              <span>Quatity: </span>
-              <button
-                className="Stinfo__button"
-                onClick={() => setQuantity((q) => (q <= 1 ? 1 : q - 1))}
-              >
-                -
-              </button>{" "}
-              {quantity}
-              <button
-                className="Stinfo__button"
-                onClick={() => setQuantity((quantity) => quantity + 1)}
-              >
-                +
-              </button>
-            </p>
-            <span>Select: </span>
-            <select>
-              <option>Green</option>
-              <option>Red</option>
-              <option>Blue</option>
-            </select>
-            <br />
-            <button
-              className="button-btn"
-              onClick={() => alert("Product added to cart successfully")}
-            >
-              Add to cart
-            </button>
-            <button className="button-btn" onClick={() => returnShop()}>
-              Go back
-            </button>
-          </div>
-        </div>
-      </div>
-      {/*  */}
-    </>
-  );
-};
-
-export default function ShopPage() {
+  const [current, setCurrent] = useState(0);
+  const [detail, setDetail] = useState(false);
+  function handleClick(index) {
+    setCurrent(index);
+    setDetail(true);
+    $("#Slider").hide();
+  }
+  function returnShop() {
+    setCurrent(0);
+    setDetail(false);
+    $("#Slider").show();
+  }
   return (
     <div id="shoppage">
-      <section id="Slider">
-        <h1>Shop</h1>
-        <p className="Slider__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </section>
-      <Page />
+      <div id="Page">
+        <section id="Slider">
+          <h1>Shop</h1>
+          <p className="Slider__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </section>
+        <div className="List__product">
+          {products.map((product, index) => {
+            return (
+              <>
+                {current === 0 && detail == false && (
+                  <div>
+                    <div
+                      className="product__item"
+                      onClick={() => handleClick(index)}
+                    >
+                      <img className="product__img" src={product.img} />
+                      <h2 className="product__name">{product.name}</h2>
+                      <p className="product__text">{product.about}</p>
+                      <p className="product__price">{product.price} USD</p>
+                    </div>
+                  </div>
+                )}
+                {current === index && detail == true && (
+                  <>
+                    <div id="Stinfo__product">
+                      <div className="row container-fluid">
+                        <div className="col-xl-6">
+                          <img className="info__img" src={product.img} />
+                        </div>
+                        <div className="col-xl-6">
+                          <ul>
+                            <li>
+                              <h2>{product.name}</h2>
+                            </li>
+                            <li>
+                              {" "}
+                              <p
+                                className="info__price"
+                                style={{ fontWeight: "600", fontSize: "24px" }}
+                              >
+                                {product.price} USD
+                              </p>
+                            </li>
+                            <li>
+                              <p style={{ fontSize: "20px" }}>
+                                {product.about}
+                              </p>
+                            </li>
+                            <li>
+                              <p className="info__quantity">
+                                <span>Quatity: </span>
+                                <button
+                                  className="Stinfo__button"
+                                  onClick={() =>
+                                    setQuantity((q) => (q <= 1 ? 1 : q - 1))
+                                  }
+                                >
+                                  -
+                                </button>{" "}
+                                {quantity}
+                                <button
+                                  className="Stinfo__button"
+                                  onClick={() =>
+                                    setQuantity((quantity) => quantity + 1)
+                                  }
+                                >
+                                  +
+                                </button>
+                              </p>
+                            </li>
+
+                            <li>
+                              {" "}
+                              <span>Select: </span>
+                              <select>
+                                <option>Green</option>
+                                <option>Red</option>
+                                <option>Blue</option>
+                              </select>
+                            </li>
+
+                            <li>
+                              <button
+                                className="button-btn"
+                                onClick={() =>
+                                  alert("Product added to cart successfully")
+                                }
+                              >
+                                Add to cart
+                              </button>
+                              <button
+                                className="button-btn"
+                                onClick={() => returnShop()}
+                              >
+                                Go back
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
