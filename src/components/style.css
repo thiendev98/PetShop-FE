@@ -3699,6 +3699,10 @@ div.container {
   padding: 0;
   list-style: none;
 }
+#Stinfo__product ul p {
+  margin: 0;
+  padding: 0;
+}
 #Stinfo__product li h2 {
   font-weight: 600;
 }
@@ -3708,12 +3712,15 @@ div.container {
 }
 @media (min-width: 1200px) {
   #Stinfo__product li {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
   #Stinfo__product li {
-    margin-top: 16px;
+    margin-top: 4px;
+  }
+  #Stinfo__product li h2 {
+    font-size: 28px;
   }
   .info__img {
     width: 64%;
@@ -3724,18 +3731,27 @@ div.container {
   #Stinfo__product li {
     margin-top: 10px;
   }
+  #Stinfo__product li h2 {
+    font-size: 28px;
+  }
   .info__img {
     width: 42%;
     border-radius: 24px;
   }
 }
 @media (max-width: 768px) and (min-width: 440px) {
+  #Stinfo__product li h2 {
+    font-size: 28px;
+  }
   .info__img {
     width: 50%;
     border-radius: 24px;
   }
 }
 @media (max-width: 440px) {
+  #Stinfo__product li h2 {
+    font-size: 28px;
+  }
   #Stinfo__product li {
     margin-top: 6px;
   }

@@ -8,6 +8,8 @@ export default function ShopPage() {
     {
       key: "1",
       name: "Small dog fish",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://uploads-ssl.webflow.com/611a94f7245a41e60e0ce4e3/611d87e676771f4ea300eeaf_image-4-shop-veterinary-x-template.jpg",
       price: 10.99,
       quantity: 1,
@@ -15,6 +17,8 @@ export default function ShopPage() {
     {
       key: "2",
       name: "Small duck pet toy",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://uploads-ssl.webflow.com/611a94f7245a41e60e0ce4e3/611d87ae9189a6483364174a_image-5-shop-veterinary-x-template.jpg",
       price: 9.99,
       quantity: 1,
@@ -22,6 +26,8 @@ export default function ShopPage() {
     {
       key: "3",
       name: "Small and medium dog brush",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://uploads-ssl.webflow.com/611a94f7245a41e60e0ce4e3/611d83a0c0a8b0c6aefb7fcf_image-1-shop-veterinary-x-template.jpg",
       price: 16.99,
       quantity: 1,
@@ -29,6 +35,8 @@ export default function ShopPage() {
     {
       key: "4",
       name: "Small and medium dog brush",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611d83a9dc225ecfd3ae419c_image-6-shop-veterinary-x-template.jpg",
       price: 9.99,
       quantity: 1,
@@ -36,6 +44,8 @@ export default function ShopPage() {
     {
       key: "5",
       name: "Small yellow dog toy",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611d869363e4025a23a25430_image-2-shop-veterinary-x-template.jpg",
       price: 9.99,
       quantity: 1,
@@ -43,6 +53,8 @@ export default function ShopPage() {
     {
       key: "6",
       name: "Pack of 2 dog bandanas",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611d8708dc225e58fcae5b39_image-3-shop-veterinary-x-template.jpg",
       price: 19.99,
       quantity: 1,
