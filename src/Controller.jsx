@@ -390,6 +390,7 @@ export default class Controller extends React.Component {
             <ShopPage
               rotateZImage={this.state.rotateZImage}
               widthofScreen={this.state.widthofScreen}
+              addProduct={this.state.addProduct}
             />
           )
         }
